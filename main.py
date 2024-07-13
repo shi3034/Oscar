@@ -20,24 +20,7 @@ def speak_old(text):
 
 def speak(text):
     tts = gTTS(text)
-    tts.save('temp.mp3') 
-
-    # Initialize Pygame mixer
-    pygame.mixer.init()
-
-    # Load the MP3 file
-    pygame.mixer.music.load('temp.mp3')
-
-    # Play the MP3 file
-    pygame.mixer.music.play()
-
-    # Keep the program running until the music stops playing
-    while pygame.mixer.music.get_busy():
-        pygame.time.Clock().tick(10)
-    
-    pygame.mixer.music.unload()
-    os.remove("temp.mp3") 
-
+   
 def aiProcess(command):
     client = OpenAI(api_key="<Your Key Here>",
     )
@@ -102,7 +85,7 @@ if __name__ == "__main__":
                 audio = r.listen(source, timeout=2, phrase_time_limit=1)
             word = r.recognize_google(audio)
             if(word.lower() == "Oscar"):
-                speak("Ya")
+                speak("Yeah")
                 # Listen for command
                 with sr.Microphone() as source:
                     print("Oscar Active...")
