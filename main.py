@@ -21,7 +21,7 @@ def speak(text):
     tts = gTTS(text)
    
 def aiProcess(command):
-    client = OpenAI(api_key="sk-None-YxHTqwW2SMRKVEVwC2b5T3BlbkFJFxYuEH2YFLOREpmIuhGV",
+    client = OpenAI(api_key="",
     )
 
     completion = client.chat.completions.create(
