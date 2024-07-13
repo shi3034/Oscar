@@ -11,7 +11,7 @@ from gtts import gTTS # type: ignore
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init() 
-newsapi = "a4239907d4fd408ba9b81aeb18e1a758"
+newsapi = ""
 
 def speak_old(text):
     engine.say(text)
