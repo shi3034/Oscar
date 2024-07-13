@@ -1,14 +1,13 @@
-import speech_recognition as sr
+import speech_recognition as sr # type: ignore
 import webbrowser
-import pyttsx3
+import pyttsx3 # type: ignore
 import musicLibrary
-import requests
-from openai import OpenAI
-from gtts import gTTS
-import pygame
-import os
+import requests # type: ignore
+from openai import OpenAI # type: ignore
+from gtts import gTTS # type: ignore
 
-# pip install pocketsphinx
+
+
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init() 
@@ -22,7 +21,7 @@ def speak(text):
     tts = gTTS(text)
    
 def aiProcess(command):
-    client = OpenAI(api_key="<Your Key Here>",
+    client = OpenAI(api_key="sk-None-YxHTqwW2SMRKVEVwC2b5T3BlbkFJFxYuEH2YFLOREpmIuhGV",
     )
 
     completion = client.chat.completions.create(
